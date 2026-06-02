@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NeurIPS 2026 Workshop on Agentic AI Trustworthiness: exploring system-level trustworthiness for autonomous AI agents.">
+    <title>NeurIPS 2026 Workshop on Agentic AI Trustworthiness</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Agentic AI Trustworthiness home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M16 3 5 8v7c0 6.7 4.6 11.5 11 14 6.4-2.5 11-7.3 11-14V8L16 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 16h12M16 10v12M11.5 11.5l9 9M20.5 11.5l-9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <strong>Agentic AI Trustworthiness</strong>
+          <small>NeurIPS 2026 Workshop</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#topics">Topics</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#committee">Committee</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">NeurIPS 2026 Workshop Proposal</p>
+            <h1 id="hero-title">Workshop on Agentic AI Trustworthiness</h1>
+            <p class="hero-lede">Exploring the next frontier of AI trustworthiness: from isolated models to autonomous, tool-using, system-level agentic AI.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#cfp">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Call for Papers
+              </a>
+              <a class="button button-secondary" href="#schedule">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4M17 3v4M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                View Schedule
+              </a>
+            </div>
+          </div>
+          <aside class="hero-panel" aria-label="Workshop details">
+            <div class="system-map" aria-hidden="true">
+              <svg viewBox="0 0 520 230">
+                <defs>
+                  <linearGradient id="stack-fill" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#1b5f9f"/>
+                    <stop offset="1" stop-color="#128079"/>
+                  </linearGradient>
+                </defs>
+                <rect class="stack-bg" x="0" y="0" width="520" height="230" rx="18"/>
+                <path class="stack-grid" d="M44 46h432M44 92h432M44 138h432M44 184h432M92 26v178M184 26v178M276 26v178M368 26v178M460 26v178"/>
+                <g class="stack-card" transform="translate(44 62)">
+                  <rect width="88" height="76" rx="14"/>
+                  <path d="M27 39h34M44 22v34M32 28l24 24M56 28 32 52"/>
+                  <text x="44" y="105">Model</text>
+                </g>
+                <g class="stack-card" transform="translate(156 62)">
+                  <rect width="88" height="76" rx="14"/>
+                  <path d="m33 49-9 9M55 27l-9 9M31 31l26 26M55 29l4-12 12 4-10 10"/>
+                  <text x="44" y="105">Tools</text>
+                </g>
+                <g class="stack-card" transform="translate(268 62)">
+                  <rect width="88" height="76" rx="14"/>
+                  <path d="M25 50h38M29 35h30M33 22h22M31 50v14M57 50v14"/>
+                  <text x="44" y="105">Infra</text>
+                </g>
+                <g class="stack-card" transform="translate(380 62)">
+                  <rect width="88" height="76" rx="14"/>
+                  <path d="M44 20 25 29v14c0 14 9 24 19 28 10-4 19-14 19-28V29L44 20Z"/>
+                  <path d="m35 44 7 7 13-16"/>
+                  <text x="44" y="105">Oversight</text>
+                </g>
+                <path class="stack-flow" d="M132 100h24M244 100h24M356 100h24"/>
+              </svg>
+              <div class="system-caption">
+                <strong>End-to-end agent assurance</strong>
+                <span>Model behavior, tool use, infrastructure, and human oversight are evaluated as one system.</span>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 21s7-4.4 7-11a7 7 0 1 0-14 0c0 6.6 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <div><strong>Sydney, Australia</strong><span>Hosted with NeurIPS 2026</span></div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 3v4M17 3v4M4 9h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+              </span>
+              <div><strong>December 6-12, 2026</strong><span>One-day workshop, exact date TBD</span></div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M16 11c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3ZM8 12c1.4 0 2.5-1.1 2.5-2.5S9.4 7 8 7 5.5 8.1 5.5 9.5 6.6 12 8 12ZM3 20c.5-3 2.4-5 5-5s4.5 2 5 5M12 20c.4-3.5 2.5-6 5-6 2.2 0 3.8 1.4 4.4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </span>
+              <div><strong>200-250 participants</strong><span>Projected in-person and online audience</span></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="overview" class="section-pad">
+        <div class="section-head">
+          <p class="eyebrow">Overview</p>
+          <h2>Trustworthiness beyond the model boundary</h2>
+          <p>This workshop brings together researchers in trustworthy machine learning, AI safety, system security, and governance to address risks that emerge when foundation models act as autonomous agents.</p>
+        </div>
+        <div class="overview-grid">
+          <article class="feature-block">
+            <h3>System-level focus</h3>
+            <p>Agentic AI systems interact with external tools, access local resources, and execute multi-step operations. Trustworthiness must account for models, infrastructure, human oversight, and deployment context together.</p>
+          </article>
+          <article class="feature-block">
+            <h3>Interdisciplinary community</h3>
+            <p>The workshop aims to connect machine learning, systems engineering, cybersecurity, human-agent interaction, and governance communities around practical frameworks for reliable agentic systems.</p>
+          </article>
+          <article class="feature-block">
+            <h3>Asia-Pacific opportunity</h3>
+            <p>With NeurIPS 2026 planned in Australia, the workshop will amplify perspectives from the Asia-Pacific region while convening global academic, industry, and public-sector stakeholders.</p>
+          </article>
+        </div>
+        <div class="metrics" aria-label="Workshop estimates">
+          <div><strong>60</strong><span>Estimated submissions</span></div>
+          <div><strong>20</strong><span>Accepted papers</span></div>
+          <div><strong>6+</strong><span>Invited keynotes</span></div>
+          <div><strong>1 day</strong><span>Talks, posters, panel</span></div>
+        </div>
+      </section>
+
+      <section id="topics" class="section-pad muted">
+        <div class="section-head">
+          <p class="eyebrow">Topics</p>
+          <h2>Research themes</h2>
+          <p>We welcome contributions that examine how agentic AI systems can be evaluated, controlled, secured, and governed in real-world environments.</p>
+        </div>
+        <div class="topic-grid">
+          <article class="topic-card" data-index="01">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V7l-8-4Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m9 12 2 2 4-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Agentic Safety & Control</h3>
+            <p>Monitoring, intervention, and override mechanisms for autonomous agent behavior.</p>
+          </article>
+          <article class="topic-card" data-index="02">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17 9 7l4 8 3-5 4 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>System-Level Robustness</h3>
+            <p>How model failures propagate through pipelines, tools, and operational environments.</p>
+          </article>
+          <article class="topic-card" data-index="03">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8zM3 12h5M16 12h5M12 3v5M12 16v5M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Interoperability & Security</h3>
+            <p>Trustworthy integration with software systems, APIs, enterprise infrastructure, and IoT.</p>
+          </article>
+          <article class="topic-card" data-index="04">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM17 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 21c.6-4.2 3-7 6-7s5.4 2.8 6 7M13 20c.5-2.7 2-4.5 4-4.5s3.5 1.8 4 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Human-Agent Collaboration</h3>
+            <p>Transparency, accountability, trust calibration, and shared control in socio-technical systems.</p>
+          </article>
+          <article class="topic-card" data-index="05">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5M4 19h16M8 16v-5M12 16V8M16 16v-3M20 16V6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Evaluation & Benchmarking</h3>
+            <p>Stress tests and benchmarks for dynamic, tool-using agentic systems beyond static datasets.</p>
+          </article>
+          <article class="topic-card" data-index="06">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 7h6M9 11h6M9 15h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3>Regulatory & Ethical Frameworks</h3>
+            <p>Alignment with safety standards, legal requirements, governance practice, and public accountability.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="speakers" class="section-pad">
+        <div class="section-head">
+          <p class="eyebrow">Speakers</p>
+          <h2>Invited speakers</h2>
+          <p>Confirmed and tentative invited speakers span AI safety, reliable machine learning, cybersecurity, governance, and agentic systems.</p>
+        </div>
+        <div class="people-grid">
+          <article class="person-card">
+            <span class="status confirmed">Confirmed</span>
+            <div class="avatar">SL</div>
+            <h3>Sharon Li</h3>
+            <p class="role">Associate Professor, University of Wisconsin-Madison</p>
+            <p>Research on safe and reliable AI systems with principled understanding and control across the model lifecycle.</p>
+          </article>
+          <article class="person-card">
+            <span class="status confirmed">Confirmed</span>
+            <div class="avatar">DS</div>
+            <h3>Dawn Song</h3>
+            <p class="role">Professor, UC Berkeley</p>
+            <p>Placeholder bio: security, privacy, and trustworthy AI perspectives for deployed agentic systems.</p>
+          </article>
+          <article class="person-card">
+            <span class="status confirmed">Confirmed</span>
+            <div class="avatar">YB</div>
+            <h3>Yoshua Bengio</h3>
+            <p class="role">Mila, Canada</p>
+            <p>Placeholder bio: AI safety, deep learning, and responsible development of advanced AI systems.</p>
+          </article>
+          <article class="person-card">
+            <span class="status confirmed">Confirmed</span>
+            <div class="avatar">OS</div>
+            <h3>Olivia Shen</h3>
+            <p class="role">University of Sydney</p>
+            <p>Placeholder bio: Asia-Pacific perspective on trustworthy AI, governance, and real-world agent deployment.</p>
+          </article>
+          <article class="person-card">
+            <span class="status tentative">Tentative</span>
+            <div class="avatar">JL</div>
+            <h3>Jade Leung</h3>
+            <p class="role">UK AI policy and governance</p>
+            <p>Placeholder bio: policy and institutional governance for frontier AI and agentic risk management.</p>
+          </article>
+          <article class="person-card">
+            <span class="status tentative">Tentative</span>
+            <div class="avatar">LK</div>
+            <h3>Lam Kwok</h3>
+            <p class="role">Singapore AI Safety Institute</p>
+            <p>Placeholder bio: regional AI safety evaluation and public-sector oversight of autonomous AI systems.</p>
+          </article>
+          <article class="person-card">
+            <span class="status tentative">Tentative</span>
+            <div class="avatar">YL</div>
+            <h3>Yann LeCun</h3>
+            <p class="role">AMI Labs</p>
+            <p>Placeholder bio: machine intelligence, representation learning, and scalable approaches to robust AI systems.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="schedule" class="section-pad muted">
+        <div class="section-head">
+          <p class="eyebrow">Program</p>
+          <h2>One-day workshop schedule</h2>
+          <p>The final agenda will be updated after workshop acceptance and speaker confirmations.</p>
+        </div>
+        <div class="agenda-board">
+          <article class="agenda-column">
+            <div class="agenda-head"><span>Morning</span><strong>Safety foundations</strong></div>
+            <div class="agenda-item compact"><time>09:00</time><div><strong>Opening Remarks</strong><span>Workshop chairs</span></div></div>
+            <div class="agenda-item"><time>09:10</time><div><strong>Keynote 1</strong><span>Agentic safety and control</span></div></div>
+            <div class="agenda-item"><time>09:50</time><div><strong>Keynote 2</strong><span>Reliable AI systems</span></div></div>
+            <div class="agenda-item compact"><time>10:30</time><div><strong>Contributed Talk 1</strong><span>Selected paper</span></div></div>
+            <div class="agenda-item break"><time>10:45</time><div><strong>Morning Tea</strong><span>Networking break</span></div></div>
+            <div class="agenda-item"><time>11:10</time><div><strong>Keynote 3</strong><span>Security and tool-using agents</span></div></div>
+            <div class="agenda-item poster"><time>11:50</time><div><strong>Live Poster Session</strong><span>Accepted papers and extended abstracts</span></div></div>
+          </article>
+          <article class="agenda-column lunch-column">
+            <div class="agenda-head"><span>Midday</span><strong>Community exchange</strong></div>
+            <div class="lunch-block">
+              <time>12:30-13:30</time>
+              <strong>Lunch Break</strong>
+              <span>Informal discussion tables and cross-community networking.</span>
+            </div>
+          </article>
+          <article class="agenda-column">
+            <div class="agenda-head"><span>Afternoon</span><strong>Governance and evaluation</strong></div>
+            <div class="agenda-item"><time>13:30</time><div><strong>Keynote 4</strong><span>Governance and oversight</span></div></div>
+            <div class="agenda-item"><time>14:10</time><div><strong>Keynote 5</strong><span>Human-agent collaboration</span></div></div>
+            <div class="agenda-item compact"><time>14:50</time><div><strong>Contributed Talk 2</strong><span>Selected paper</span></div></div>
+            <div class="agenda-item break"><time>15:05</time><div><strong>Afternoon Tea</strong><span>Networking break</span></div></div>
+            <div class="agenda-item"><time>15:30</time><div><strong>Keynote 6</strong><span>Evaluation and benchmarking</span></div></div>
+            <div class="agenda-item panel"><time>16:10</time><div><strong>Panel Discussion</strong><span>From model alignment to system assurance</span></div></div>
+            <div class="agenda-item compact"><time>17:10</time><div><strong>Closing Remarks</strong><span>Next steps</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="cfp" class="section-pad">
+        <div class="cta-band">
+          <div>
+            <p class="eyebrow">Call for Papers</p>
+            <h2>Submissions and participation</h2>
+            <p>We plan to solicit short research papers and extended abstracts on trustworthy, secure, reliable, and governable agentic AI systems. Submission dates, OpenReview link, and camera-ready instructions will be announced after acceptance.</p>
+          </div>
+          <a class="button button-primary" href="mailto:contact@example.org">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            Contact Organizers
+          </a>
+        </div>
+      </section>
+
+      <section id="diversity" class="section-pad muted">
+        <div class="section-head">
+          <p class="eyebrow">Diversity & Inclusion</p>
+          <h2>Broad participation by design</h2>
+          <p>Trustworthy agentic AI spans technical, societal, governance, and industrial dimensions. The workshop will intentionally include diverse regions, sectors, disciplines, career stages, and communities.</p>
+        </div>
+        <div class="inclusion-grid">
+          <div><strong>Mentoring</strong><span>Support for first-time authors and researchers from less-resourced institutions.</span></div>
+          <div><strong>Financial support</strong><span>Travel grants or registration support will be explored where sponsorship permits.</span></div>
+          <div><strong>Inclusive CFP</strong><span>Submission language will explicitly welcome varied backgrounds and research traditions.</span></div>
+          <div><strong>Targeted outreach</strong><span>Outreach to affinity groups and underrepresented communities in AI research.</span></div>
+        </div>
+      </section>
+
+      <section id="organizers" class="section-pad">
+        <div class="section-head">
+          <p class="eyebrow">Organization</p>
+          <h2>Organizing committee</h2>
+          <p>The committee brings together expertise in trustworthy machine learning, systems, security, and AI governance. Some bios are placeholders pending confirmation.</p>
+        </div>
+        <div class="organizer-grid">
+          <article class="organizer-card"><h3>Bo Li</h3><p>Associate Professor, UIUC. Placeholder bio pending final organizer profile.</p></article>
+          <article class="organizer-card"><h3>Bang Liu</h3><p>Placeholder bio pending affiliation and final organizer profile.</p></article>
+          <article class="organizer-card featured"><h3>Feng Liu</h3><p>Assistant Professor in Machine Learning at the University of Melbourne. His research focuses on statistical hypothesis testing and trustworthy machine learning, with awards and workshop organization experience across NeurIPS, ACML, and national Australian AI events.</p></article>
+          <article class="organizer-card"><h3>Keith Ross</h3><p>Placeholder bio pending final organizer profile.</p></article>
+          <article class="organizer-card"><h3>Javen Shi</h3><p>Placeholder bio pending final organizer profile.</p></article>
+          <article class="organizer-card"><h3>Yiliao Song</h3><p>Placeholder bio pending final organizer profile.</p></article>
+          <article class="organizer-card"><h3>Jason Xue</h3><p>Placeholder bio pending final organizer profile.</p></article>
+          <article class="organizer-card"><h3>Yu Yao</h3><p>Placeholder bio pending final organizer profile.</p></article>
+        </div>
+      </section>
+
+      <section id="committee" class="section-pad muted">
+        <div class="section-head">
+          <p class="eyebrow">Review</p>
+          <h2>Program committee</h2>
+          <p>Current PC members include senior PhD candidates, early-career faculty, and mid-career researchers. The committee will be expanded as the review process is finalized.</p>
+        </div>
+        <div class="committee-shell">
+          <aside class="committee-summary">
+            <strong>27</strong>
+            <span>Current PC members</span>
+            <p>Reviewers span academia, industry labs, and international research institutes.</p>
+          </aside>
+          <div class="committee-directory">
+            <label class="search-box" for="pc-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-5.2-5.2M18 10.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input id="pc-search" type="search" placeholder="Search committee by name, institution, or country">
+            </label>
+            <div class="committee-list" id="committee-list">
+              <article class="committee-member"><h3>Thomas Berrett</h3><p>Associate Professor</p><span>University of Warwick</span><em>United Kingdom</em></article>
+              <article class="committee-member"><h3>Siu Lun Chau</h3><p>Assistant Professor</p><span>Nanyang Technological University</span><em>Singapore</em></article>
+              <article class="committee-member"><h3>Hyeong Kyu Choi</h3><p>PhD Candidate</p><span>University of Wisconsin Madison</span><em>United States</em></article>
+              <article class="committee-member"><h3>Gautam Dasarathy</h3><p>Associate Professor</p><span>Arizona State University</span><em>United States</em></article>
+              <article class="committee-member"><h3>Namrata Deka</h3><p>PhD Candidate</p><span>Carnegie Mellon University</span><em>United States</em></article>
+              <article class="committee-member"><h3>Rianne de Heide</h3><p>Assistant Professor</p><span>University of Twente</span><em>Netherlands</em></article>
+              <article class="committee-member"><h3>Raaz Dwivedi</h3><p>Assistant Professor</p><span>Cornell Tech</span><em>United States</em></article>
+              <article class="committee-member"><h3>Boyan Duan</h3><p>Data Scientist</p><span>Google</span><em>United States</em></article>
+              <article class="committee-member"><h3>Mingming Gong</h3><p>Senior Lecturer</p><span>University of Melbourne</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Zhuo Huang</h3><p>PhD Candidate</p><span>University of Sydney</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Wittawat Jitkrittum</h3><p>Research Scientist</p><span>Google Research</span><em>United States</em></article>
+              <article class="committee-member"><h3>Yazhe Li</h3><p>Researcher</p><span>Microsoft AI</span><em>United Kingdom</em></article>
+              <article class="committee-member"><h3>Weizhi Li</h3><p>Postdoc Researcher</p><span>Los Alamos National Lab</span><em>United States</em></article>
+              <article class="committee-member"><h3>Liuhua Peng</h3><p>Senior Lecturer</p><span>University of Melbourne</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Shengming Luo</h3><p>PhD Candidate</p><span>Carnegie Mellon University</span><em>United States</em></article>
+              <article class="committee-member"><h3>Krikamol Muandet</h3><p>Chief Scientist</p><span>CISPA - Helmholtz Center for Information Security</span><em>Germany</em></article>
+              <article class="committee-member"><h3>Karthikeyan Natesan Ramamurthy</h3><p>Research Scientist</p><span>IBM Research</span><em>United States</em></article>
+              <article class="committee-member"><h3>Changdae Oh</h3><p>PhD Candidate</p><span>University of Wisconsin Madison</span><em>United States</em></article>
+              <article class="committee-member"><h3>Roman Pogodin</h3><p>Postdoc Researcher</p><span>McGill / Mila</span><em>Canada</em></article>
+              <article class="committee-member"><h3>Antonin Schrab</h3><p>Postdoc Researcher</p><span>University College London</span><em>United Kingdom</em></article>
+              <article class="committee-member"><h3>Xiaojun Song</h3><p>Associate Professor</p><span>Peking University</span><em>China</em></article>
+              <article class="committee-member"><h3>Yanlin Tang</h3><p>Assistant Professor</p><span>Tongji University</span><em>China</em></article>
+              <article class="committee-member"><h3>Xunye Tian</h3><p>PhD Candidate</p><span>University of Melbourne</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Wenkai Xu</h3><p>Lecturer</p><span>University of Warwick</span><em>United Kingdom</em></article>
+              <article class="committee-member"><h3>Zesheng Ye</h3><p>Postdoc Researcher</p><span>University of Melbourne</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Jiacheng Zhang</h3><p>PhD Candidate</p><span>University of Melbourne</span><em>Australia</em></article>
+              <article class="committee-member"><h3>Zhijian Zhou</h3><p>PhD Candidate</p><span>University of Melbourne</span><em>Australia</em></article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>NeurIPS 2026 Workshop on Agentic AI Trustworthiness</strong>
+        <span>Sydney, Australia | December 2026</span>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
