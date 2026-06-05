@@ -1,0 +1,322 @@
+\documentclass{article}
+\usepackage[main,final]{neurips_2025}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\usepackage{enumitem}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage[most]{tcolorbox}
+
+\usepackage{xcolor}
+
+\usepackage{multirow}
+
+\usepackage{soul}
+\sethlcolor{gray!20}
+
+\PassOptionsToPackage{table}{xcolor}
+\definecolor{SteelBlue}{RGB}{70, 130, 180}
+\definecolor{rqone}{RGB}{235,240,247}   % 浅蓝
+\definecolor{rqtwo}{RGB}{245,239,228}   % 浅米色
+\definecolor{rqthree}{RGB}{232,243,235} % 浅绿
+\definecolor{rqfour}{RGB}{241,236,246}
+
+
+\newtcolorbox{advertisement}{
+    enhanced,
+    breakable,                
+    colback=SteelBlue!8, 
+    frame hidden,             
+    borderline west={2pt}{0pt}{black!70}, 
+    sharp corners,            
+    fontupper=\small\itshape, 
+    fontupper=\small\itshape\centering,
+    left=10pt, right=10pt,
+    before skip=10pt, after skip=10pt
+}
+
+
+\newcommand{\httpurl}[1]{\href{http://#1}{\nolinkurl{#1}}}
+\newcommand{\httpsurl}[1]{\href{https://#1}{\nolinkurl{#1}}}
+\usepackage{fontawesome5}
+% \newcommand{\orginfo}[3]{\\{\small\faEnvelope\ \texttt{#1} \hfill \href{#2}{Homepage} \hfill \href{https://scholar.google.com/citations?user=#3}{Google Scholar}}}
+\newcommand{\orginfo}[3]{\\{\small\faEnvelope\ \texttt{#1} \hfill \faHome\ \href{https://#2}{Homepage} \hfill \faGraduationCap\ \href{https://scholar.google.com/citations?user=#3}{Google Scholar}}}
+% \author{%
+% Alice Smith \\ University of A \\ \texttt{alice@univa.edu} 
+% \And Bob Lee \\ TechCorp Research \\ \texttt{bob.lee@techcorp.com} 
+% \And Carol Zhang \\ University of C \\ \texttt{carol.z@univc.edu} 
+% \And Daniel Kumar \\ Institute of AI \\ \texttt{dkumar@iai.org}
+% }
+\usepackage{pifont}
+\newcommand{\confirmed}{\textcolor{green!60!black}{\textbf{Confirmed}}}
+\newcommand{\tentative}{\textcolor{orange!80!black}{Tentative}}
+\newcommand{\eg}{\textit{e.g.}}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{booktabs}
+% Define colors
+\definecolor{neuripsblue}{RGB}{25, 66, 133}
+ 
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+% \renewcommand{\headrulewidth}{0.5pt}
+ 
+% Title styling
+\newcommand{\sectiontitle}[1]{\noindent\textbf{\textcolor{neuripsblue}{#1}}\vspace{0.1cm}\hrule\vspace{0.2cm}}
+
+ 
+% Custom list formatting
+\setlist[itemize]{left=0pt, labelindent=0pt, topsep=0.2cm, itemsep=0.1cm}
+\setlist[enumerate]{left=0pt, labelindent=0pt, topsep=0.2cm, itemsep=0.1cm}
+ 
+\title{\large NeurIPS 2026 Workshop on Agentic AI Trustworthiness\\
+\large \textit{\mdseries{Sydney, Australia 6-12 December 2026}}\large\normalfont~\raisebox{-0.1em}{[\ding{43}~\href{https://a5507203.github.io/neurips-agentic-ai-workshop/}{\hl{website}}]}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+% ============================================================================
+% PART 1: MAIN PROPOSAL (Max 3 pages)
+% ============================================================================
+\vspace{-7em}
+\begin{advertisement}
+Exploring the Next Frontier of AI Trustworthiness: from Models to Agentic Systems
+\end{advertisement}
+
+\section*{\textcolor{neuripsblue}{\large PART I: MAIN PROPOSAL}}
+\vspace{-7pt}
+\sectiontitle{Description}
+\vspace{-2pt}
+% This workshop seeks to pivot the academic discourse on AI trustworthiness from isolated model-level alignment toward the broader systemic risks. This is emerging critical as foundation models have been integrated into complex, high-stakes industrial environments as ``agents". New trustworthy challenges appear during agents interactions, especially when they have the access to system files and external tools. The solution to these challenges requires 不同领域的专业知识，而不仅仅是单一领域进行管中窥豹的研究。
+This workshop seeks to pivot the academic discourse on AI trustworthiness from isolated model-level alignment toward a broader focus on system-level risks. This shift is increasingly critical as foundation AI models are deployed as autonomous agents in complex, high-stakes environments \cite{anthropic_claudecode_2025, openai_codex_system}, where they interact with external tools \cite{schick2023toolformer}, access local resources \cite{yang2024sweagent}, and take partial control over system operations~\cite{li2026les}. Accordingly, trustworthiness challenges arise from interactions among models, tools, infrastructure, and human oversight, rather than from models alone~\cite{deng2024aiagents,kim2026attackdefense}. Addressing these challenges requires interdisciplinary collaboration across computer science, software engineering, cybersecurity, and governance to build reliable agentic AI systems beyond siloed perspectives.
+
+
+This workshop aims to bring together a diverse group of researchers from trustworthy machine learning, AI safety, system security, and governance to foster interdisciplinary collaboration and cultivate a shared focus on these challenges. It seeks to explore new directions for system-level frameworks for trustworthiness in the agentic era, balancing autonomy with reliability and oversight.
+
+\hl{Unique Opportunity}: Historically, the research community has made significant progress in trustworthy AI. However, this workshop aims to broaden its impact across research domains such as machine learning, systems engineering, cybersecurity, and governance, as well as the wider community across academia, industry, and government. In addition, with NeurIPS 2026 being held on-site in Australia for the first time, we have a unique opportunity to amplify diverse voices from the Asia-Pacific region and beyond, while fostering deeper engagement and collaboration among researchers worldwide.
+
+\hl{Location Preference and Estimated Attendees}: The preferred location is Sydney. We anticipate approximately 60 submissions, with an acceptance rate of around one-third. We expect 200–250 participants (including online attendees), supported by facilities for remote participation.
+
+\hl{Concurrent Submissions}: No related proposals have been submitted to other venues. Any concurrent NeurIPS 2026 workshop proposals by the organizers have been disclosed in the organizer information. All organizers comply with the policy limiting at most two workshop proposals per organizer.
+
+\sectiontitle{Topics}
+\vspace{-2pt}
+We welcome original contributions on one or more of the following topics:
+\begin{itemize}[leftmargin=10pt,itemsep=1pt,topsep=2pt]
+\item \textbf{LLM Trustworthiness}. Multi-dimensional evaluation and improvement of LLMs across safety, fairness, robustness, privacy, and ethics for reliable deployment [\eg \cite{wang2023decodingtrust, huang2024trustllm, wei2023jailbroken}].
+
+\item \textbf{Agentic AI Autonomy}. Architectural design, planning, memory, and tool-use capabilities of LLM-based autonomous agents that operate with extended autonomy [\eg \cite{yao2023react, zhou2024webarena, yang2024sweagent}].
+
+\item \textbf{Agentic AI Safety} including but not limited to:
+\begin{itemize}[itemsep=1pt,topsep=0pt]
+\item \textit{Adversarial Attacks} such as prompt injection and jailbreak that bypass alignment or inject malicious instructions via external data, and defenses against them [\eg \cite{zou2023universal, liu2024autodan, chen2025struq}].
+
+\item \textit{Multi-Agent Coordination Security}.  Cascading failures, rogue agent infiltration, and covert inter-agent collusion in multi-agent systems, and defenses against them [\eg \cite{gu2024agentsmith}].
+
+\item \textit{Agent-Tool Integration}. Trust boundary violations  or privilege escalation when agents interact with external tools or protocols such as MCP, and defenses against them [\eg \cite{wu2025isolategpt}].
+
+\item \textit{Agent-Memory Attack}. Attacks that compromise the long-term memory or knowledge bases of LLM agents, and defenses against them  [\eg \cite{chen2024agentpoison}].
+
+\item \textit{Agentic Knowledge Attacks}. Knowledge base poisoning, backdoored retrievers, and corrupted upstream components that persistently manipulate agents, and defenses against them [\eg \cite{zou2025poisonedrag}].
+
+
+\item \textit{Agentic Control Flow Attacks}. Attacks that hijack agent decision-making at runtime by manipulating planning, and defenses against them[\eg \cite{zhang2025asb, xu2026storage}].
+
+\item \textit{Privacy and Data Leakage}. Training data extraction, membership inference, and sensitive data leakage, and mitigation against them [\eg \cite{lukas2023analyzing, carlini2023memorization}].
+\end{itemize}
+
+\item \textbf{Agentic AI Reliability} including but not limited to:
+\begin{itemize}[itemsep=1pt,topsep=0pt]
+
+\item \textit{Hallucination and Factuality}. Factual errors compounding across multi-step agent reasoning chains, and evaluation and mitigation strategies for ensuring factual reliability [\eg \cite{lin2022truthfulqa, tian2023finetuning}].
+
+\item \textit{Human Oversight}. Mechanisms for meaningful human intervention in autonomous agent systems, addressing the scalability of oversight and risks of automation bias [\eg \cite{burns2024weak, kenton2024scalable}].
+
+\item \textit{Interpretability and Explainability}. Understanding LLM internals, enabling auditing, debugging, and behavioral intervention in deployed agent systems [\eg \cite{conmy2023automated, tigges2024llm}].
+
+\item \textit{Testing, Debugging, and Evaluation}. Dynamic testing, fault localization, and systematic evaluation of agentic AI systems under real-world deployment conditions [\eg \cite{jimenez2024swebench, xia2025agentless, xia2023automated}].
+\end{itemize}
+\item \textbf{Governance}. Regulatory frameworks and institutional practices for establishing responsibility, auditability, and compliance for agentic AI systems in high-stakes domains [\eg \cite{mitchell2019model, bender2021stochastic}].
+\item \textbf{Broader Path to Reliable AI}. Architectural and training paradigm advances that move beyond next-token prediction toward richer world models and more reliable internal representations, enabling more robust and trustworthy agentic behavior [\eg \cite{huang2026llmjepa}].
+\end{itemize}
+
+
+% --- Section 4: Invited Speakers ---
+\sectiontitle{Invited Speakers (alphabetical order)}
+\vspace{-2pt}
+ \textbf{Yoshua Bengio} (\confirmed, Professor \& Scientific Advisor, Mila / Université de Montréal, CA): is co-recipient of the 2018 ACM Turing Award for foundational work on deep learning, and the most cited computer scientist worldwide. His current work centers on AI safety: he chairs the 96-expert international team behind the first \textit{International AI Safety Report} (2025), and founded LawZero, a nonprofit building ``safe-by-design’’ AI systems that detect and block harmful agent behavior.
+
+\textbf{Yann LeCun} (\confirmed, Executive Chair, AMI Labs / Professor, NYU, US): is the Jacob T.~Schwartz Professor at the Courant Institute of Mathematical Sciences, New York University, and Executive Chair of Advanced Machine Intelligence Labs (AMI Labs), a company he founded in late 2025 to build AI ``world models’’ that learn the structure and dynamics of the physical world. He was formerly Chief AI Scientist at Meta FAIR for over a decade. He is co-recipient of the 2018 ACM Turing Award for foundational contributions to deep learning and convolutional neural networks, and a recipient of the 2022 Princess of Asturias Award in Scientific Research.
+     
+\textbf{Sharon Li} (\confirmed, Associate Professor, University of Wisconsin-Madison, US): Her research works towards LLM systems that are reliable by design, with behaviors that can be rigorously understood and reasoned about, enabling principled control throughout the model lifecycle from training to deployment. Her research has been recognized by the Alfred P. Sloan Fellowship (2025), MIT Innovators Under 35 Award (2023), NSF CAREER Award (2023), AFOSR Young Investigator (YIP) Award (2022), Forbes 30 Under 30 in Science (2020).
+
+\textbf{Olivia Shen} (\confirmed, Director of Strategic Technologies, United States Studies Centre, University of Sydney, AU): leads the Strategic Technologies Program at the University of Sydney’s US Studies Centre. She previously directed the Data Science and AI Strategy section for the Australian Department of Home Affairs, bringing over a decade of national security and foreign policy experience. A Fulbright and Thawley Scholar (CSIS, Washington D.C.) and former Congressional Research Fellow at ANU, her research focuses on the ethics and governance of AI in national security contexts.
+
+\textbf{Dawn Song} (\confirmed, Professor, UC Berkeley, US): is the Co-Director of the Berkeley Center on Responsible Decentralized Intelligence. Her research spans AI safety and security, agentic AI, deep learning, and privacy. She is the recipient of the MacArthur Fellowship, the Guggenheim Fellowship, Schmidt Sciences AI2050 Senior Fellowship, the NSF CAREER Award, the Alfred P. Sloan Research Fellowship, and MIT Technology Review TR-35 Award, as well as over 10 Test-of-Time Awards and Best Paper Awards from top venues in computer security and deep learning. She is an ACM Fellow, IEEE Fellow, and elected member of the American Academy of Arts and Sciences.
+    
+\textbf{Jade Leung} (\tentative, PM’s AI Adviser \& CTO, UK AI Security Institute, UK): is the AI Adviser to British Prime Minister Keir Starmer and Chief Technology Officer of the UK AI Security Institute, where she designs evaluations for frontier AI models and reports directly to the Prime Minister. She co-founded the Centre for the Governance of AI at Oxford, was formerly the Governance Lead at OpenAI, and holds a Rhodes Scholarship with a doctorate on AI governance. She was named one of \textit{Time}’s 100 Most Influential People in AI (2024).
+
+ \textbf{Lam Kwok Yan} (\tentative, Professor \& Executive Director, Singapore AISI, SG): is the founding Executive Director of Singapore’s AI Safety Institute (AISI) and the Digital Trust Centre at Nanyang Technological University (NTU), where he is also Associate Vice President and Professor in the College of Computing and Data Science. He is the recipient of the 2022 Singapore Cybersecurity Hall of Fame Award and a former INTERPOL consultant on cyber and new technology innovation.
+    % \item Mary-Anne William (\textcolor{orange}{Tentative}, AU-CommBank): she
+    % \item Guohao Li (\textcolor{orange}{Tentative}, UK- CAMEL-AI.org): Guohao Li is an artificial intelligence researcher and an open-source contributor working on building intelligent agents that can perceive, learn, communicate, reason, and act. He is the core lead of the open source projects CAMEL-AI.org and DeepGCNs.org.
+
+% \vspace{-1em}
+\hl{Diversity}. For a topic of this nature, diversity of expertise is essential, as the challenges and risks emerging from AI systems span technical, societal, governance, and industrial dimensions. We believe it is critical to hear perspectives from different regions of the world and from communities facing distinct regulatory, cultural, and application contexts. To support this, we have intentionally assembled organizers and speakers from multiple continents, with representation across genders, disciplines, and sectors, including researchers, government-related stakeholders, and industry practitioners. This diversity is intended to foster genuinely interdisciplinary and globally informed discussions around the future development and governance of trustworthy AI systems.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{diversity_map1.pdf}
+\end{figure}
+\vspace{-2pt}
+
+\hl{Other Efforts to Include Diverse Participants:}
+Our call for papers will use inclusive language encouraging submissions from researchers of all backgrounds and career stages. We will introduce a \textit{mentoring program} pairing each accepted paper with an experienced researcher for pre-workshop feedback, supporting first-time presenters and authors from less-resourced institutions.
+We are exploring travel grants and registration waivers for authors from underrepresented groups, funded through industrial sponsorship.
+With NeurIPS 2026 being the first held in Australia, we will conduct targeted outreach to the Asia-Pacific community to amplify voices underrepresented at top-tier machine learning venues.
+
+\sectiontitle{Format and Schedule}
+\vspace{-2pt}
+\textbf{Length and Content.}
+Scheduled length for the workshop is one day. This workshop will include invited talks, contributed talks, poster presentations, and a panel discussion. Throughout the day, we emphasize \textbf{audience participation}: each talk includes Q\&A, the poster session enables one-on-one discussions, and the panel is devoted to open discussion. We plan to record the talks for later viewing. 
+
+\textbf{Schedule.}
+We plan the following sessions for the workshop:\\
+% \begin{table}[h]
+\begingroup
+  \hfill
+  % \caption{Workshop Schedule}
+  % \resizebox{\linewidth}{!}{
+    \begin{tabular}{l|l|l}
+    \toprule
+    \multicolumn{1}{c|}{\textbf{Morning Session}}  & \multicolumn{1}{c|}{\textbf{Lunch Break}} & \multicolumn{1}{c}{\textbf{Afternoon Session}}  \\
+    % \multicolumn{1}{c|}{\textbf{Foundation of Testing}} & \multicolumn{1}{c|}{\textbf{Sectors Related to Testing}} & \multicolumn{1}{c}{\textbf{Panel and Poster }} \\
+    \midrule
+    09:00-09:10: Opening Remarks &   \multirow{8}{*}{12:30pm-1:30om} &  \\
+    09:10-09:50: Keynote 1 & & 1:30-2:10: Keynote 4  \\
+    09:50-10:30: Keynote 2 & & 2:10-2:50: Keynote 5  \\
+    10:30-10:45: Contributed Talk 1 & & 2:50-3:05: Contributed Talk 2  \\
+    10:45-11:10: Morning Tea Break & & 3:05-3:30: Afternoon Tea Break   \\
+    11:10-11:50: Keynote 3 & & 3:30-4:10: Keynote 6  \\
+    11:50-12:30: Live Poster & & 4:10-5:10: Panel Discussion  \\
+     & & 5:10-5:20: Closing Remarks   \\
+    \bottomrule
+    \end{tabular}%
+    % }
+  % \label{tab:schedule}%
+% \end{table}%
+\hfill
+\endgroup
+
+\newpage
+ 
+% ============================================================================
+% PAGE BREAK
+% ============================================================================
+\newpage
+ 
+% ============================================================================
+% PART 2: ORGANIZER INFORMATION (Max 2 pages)
+% ============================================================================
+\section*{\textcolor{neuripsblue}{\large PART II: ORGANIZER INFORMATION}}
+\vspace{-7pt}
+% --- Section 1: Organizers ---
+\sectiontitle{Organization Committee (alphabetical order)}
+\vspace{-2pt}
+\textbf{Bo Li} (she/her) is a professor in the Department of Computer Science at the University of Illinois at Urbana-Champaign. She is the recipient of the IJCAI Computers and Thought Award, Alfred P. Sloan Research Fellowship, NSF CAREER Award, AI's 10 to Watch, MIT Technology Review TR-35 Award, Dean's Award for Excellence in Research, C.W. Gear Outstanding Faculty Award, Intel Rising Star Award, Symantec Research Labs Fellowship, Rising Stars in EECS, Research Awards from Tech companies such as Amazon, Meta, Google, Intel, MSR, eBay, and IBM, and best paper awards at several top machine learning and security conferences. Her research focuses on both theoretical and practical aspects of trustworthy machine learning, which is at the intersection of machine learning, security, privacy, and game theory. Her work has been featured by major publications and media outlets such as Nature, Wired, Fortune, and New York Times. She has co-organized workshops on Trustworthy Multi-modal Foundation Models and AI Agents at ICML 2024 and Foundation Models for Science: Progress, Opportunities, and Challenges at NeurIPS 2024.
+\orginfo{lbo@illinois.edu}{aisecure.github.io}{K8vJkTcAAAAJ}
+
+\textbf{Bang Liu} (he/him) is a Canada CIFAR AI Chair at Mila and an Associate Professor in the Department of Computer Science and Operations Research (DIRO) at the Université de Montréal. He received his PhD from the University of Alberta in 2020. His research focuses on natural language processing, multimodal and embodied learning, theory and techniques for AGI (including understanding and improving large language models), and AI for science. His primary research goal is to develop embodied multimodal agents that understand grounded language.
+\orginfo{bang.liu@umontreal.ca}{https://www-labs.iro.umontreal.ca/~liubang/}{lmfAnP4AAAAJ}
+
+\textbf{Feng Liu} (he/him) is a senior lecturer (US associate professor) in Machine Learning at the University of Melbourne, Australia. His research interests focus on statistical hypothesis testing and trustworthy machine learning. For his work on hypothesis testing and distribution-shift detection, he received an outstanding paper award from NeurIPS ‘22, the Australasian AI Emerging Research Award from the Australian Computer Science Society in 2024, and the Discovery Early Career Researcher Award from the Australian Research Council in 2023. He presented tutorials at ECML ‘24, IJCAI ‘24, AAAI ‘24, and ACML ‘23 on adversarial machine learning and tutorials at ACML ‘24 and AAAI ‘26 on efficient fine-tuning. He also organized five international workshops (include the first ICML workshop on hypothesis testing), one national Australian AI conference (around 250 attendees) as a local arrangement chair, and NeurIPS ‘26 as a communication chair.
+\orginfo{fengliu.ml@gmail.com}{fengliu90.github.io}{[scholar\_id]}
+
+\textbf{Keith W.\ Ross} (he/him) is a Professor of Computer Science at NYU Abu Dhabi, UAE. He previously served as Dean of Computer Science, Data Science and Engineering at NYU Shanghai from 2013 to 2023 and has held faculty appointments at the University of Pennsylvania and Institut Eurecom. His current research focuses on deep reinforcement learning and artificial intelligence. He is the co-author of the widely adopted textbook Computer Networking: A Top-Down Approach (9th ed., Pearson, 2025). He is both an ACM Fellow and an IEEE Fellow, and serves as an Area Chair for NeurIPS. His extensive leadership experience includes serving as Program Committee Co-Chair for ACM Multimedia 2002, ACM CoNEXT 2008, and IPTPS 2009.
+\orginfo{[keithwross@nyu.edu]}{https://sites.google.com/nyu.edu/keithross/}{RhUcYmQAAAAJ}
+
+\textbf{Javen Qinfeng Shi} (he/him) is a Professor and Founding Director of the Causal AI Group at the Australian Institute for Machine Learning (AIML), Adelaide University, AU. His research focuses on causation, artificial intelligence, probabilistic graphical models, and foundational questions around mind and metaphysics. He is internationally recognised for highly ranked contributions in causation and graphical models, with impactful applications across materials discovery, agriculture, mining, supply chains, sport, manufacturing, bushfire management, healthcare, and education. His work has received the ACM SIGIR 2025 Test of Time Award, top placement in the Open Catalyst Challenge (NeurIPS AI for Science 2023), and multiple global competition wins and finalist recognitions in areas ranging from bushfire prediction to industrial AI and digital manufacturing innovation. 
+\orginfo{javen.shi@adelaide.edu.au}{https://javenshi.org/}{h6O9vYkAAAAJ}
+
+\textbf{Yiliao (Lia) Song} (she/her) is an assistant professor in Machine Learning at Adelaide University. Her research focuses on trustworthy machine learning in non-i.i.d. settings, with interests spanning robust learning, distribution shift, and reliable AI systems. She has been recognised through the Emerging Research Contribution Award from the Australian Computer Society and the DAAD–AINeT Fellowship. She has served in a range of leadership roles within the AI research community, including Program Chair for the Australasian Joint Conference on Artificial Intelligence (2024), Sponsorship Chair (2023) and Publication Chair (2026) for the same conference, and Workshop and Tutorial Chair for the 26th International Conference on Digital Image Computing: Techniques and Applications.
+\orginfo{lia.song@adelaide.edu.au}{songyiliao.github.io}{lKzKBHUAAAAJ}
+
+\textbf{Jason (Minhui) Xue} (he/him) is a Senior Research Scientist and Lead of the AI Security sub-team at CSIRO, Australia. His research focuses on AI security and privacy, system and software security, and Internet measurement. He is a recipient of the IEEE TCSC Award for Excellence (Middle Career Researcher) for contributions to systems security and responsible AI development. He was selected as one of 40 global experts appointed to the United Nations’ International Scientific Panel on AI and currently serves as an Area Chair for the Position Track at NeurIPS.
+\orginfo{Jason.Xue@csiro.au}{https://minhui-xue.github.io/}{[jdqkm1IAAAAJ]}
+
+\textbf{Yu Yao} (he/him) is a Lecturer in Machine Learning at the School of Computer Science, University of Sydney. He completed his PhD at the University of Sydney under Prof.\ Tongliang Liu and Prof.\ Dacheng Tao, and held postdoctoral fellowships at Mohamed bin Zayed University of Artificial Intelligence and Carnegie Mellon University. His research aims to make ML systems reliable and aligned with human understanding, with a focus on robustness to noise across diverse data modalities.
+\orginfo{[yu.yao@sydney.edu.au]}{a5507203.github.io}{OkcaMKAAAAAJ}
+
+    % \item Guohao Li (\textcolor{orange}{Tentative}, UK- CAMEL-AI.org): Guohao Li is an artificial intelligence researcher and an open-source contributor working on building intelligent agents that can perceive, learn, communicate, reason, and act. He is the core lead of the open source projects CAMEL-AI.org and DeepGCNs.org.
+% \end{itemize} 
+
+\sectiontitle{Program Committee Members (alphabetical order)}
+\vspace{-2pt}
+The program committee (PC) members of this workshop include senior PhD candidates, early-career faculty members, and mid-career faculty members. PC members need to provide high-quality reviews for all submissions, for which we require three reviews per submission. The current list is shown below. More PC members will be contacted when the decision is out, and the number of PC members should be 60 (requiring 27 more), corresponding to an estimated 60 submissions.
+\begin{itemize}[leftmargin=10pt,nosep]
+\item Jun Bai (\confirmed), Postdoctoral Researcher, McGill University, Canada
+\item James Bailey, Professor, University of Melbourne, Australia
+\item Thomas Berrett, Associate Professor, University of Warwick, United Kingdom
+\item Siu Lun Chau (\confirmed), Assistant Professor, Nanyang Technological University, Singapore
+\item Hyeong Kyu Choi (\confirmed), PhD Candidate, University of Wisconsin Madison, United States
+\item Gautam Dasarathy, Associate Professor, Arizona State University, United States
+\item Rianne de Heide, Assistant Professor, University of Twente, Netherlands
+\item Namrata Deka, PhD Candidate, Carnegie Mellon University, United States
+\item Boyan Duan, Data Scientist, Google, United States
+\item Raaz Dwivedi, Assistant Professor, Cornell Tech, United States
+\item Sarah Erfani, Associate Professor, University of Melbourne, Australia
+\item Mingming Gong (\confirmed), Associate Professor, University of Melbourne, Australia
+\item Zhuo Huang (\confirmed), PhD Candidate, University of Sydney, Australia
+\item Wittawat Jitkrittum, Research Scientist, Google Research, United States
+\item Weizhi Li, Postdoc Researcher, Los Alamos National Lab, United States
+\item Yazhe Li, Researcher, Microsoft AI, United Kingdom
+\item Maggie Liu (\confirmed), Assistant Professor, RMIT University, Australia
+\item Shengming Luo, PhD Candidate, Carnegie Mellon University, United States
+\item Krikamol Muandet, Chief Scientist, CISPA - Helmholtz Center for Information Security, Germany
+\item Karthikeyan Natesan Ramamurthy, Research Scientist, IBM Research, United States
+\item Liuhua Peng (\confirmed), Senior Lecturer, University of Melbourne, Australia
+\item Roman Pogodin, Postdoc Researcher, McGill/Mila, Canada
+\item Antonin Schrab (\confirmed), Postdoc Researcher, University College London, United Kingdom
+\item Xiaojun Song, Associate Professor, Peking University, China
+\item Xunye Tian (\confirmed), PhD Candidate, University of Melbourne, Australia
+\item Di Wu (\confirmed), Senior Lecturer, La Trobe University, Australia
+\item Wenkai Xu, Lecturer, University of Warwick, United Kingdom
+\item Zesheng Ye (\confirmed), Postdoc Researcher, University of Melbourne, Australia
+\item Jiacheng Zhang (\confirmed), PhD Candidate, University of Melbourne, Australia
+\item Zhijian Zhou (\confirmed), PhD Candidate, University of Melbourne, Australia
+\item Xiaogang Zhu (\confirmed), Lecturer, University of Adelaide, Australia
+
+\end{itemize}
+
+% \section{Primary Contacts}
+
+% \textbf{Feng Liu} (\texttt{fengliu.ml@gmail.com})
+% and \textbf{Danica J. Sutherland} (\texttt{dsuth@cs.ubc.ca})
+% ============================================================================
+% REFERENCES (Unlimited)
+% ============================================================================
+\newpage
+
+\bibliography{ref}
+\bibliographystyle{unsrt}
+
+\end{document}
