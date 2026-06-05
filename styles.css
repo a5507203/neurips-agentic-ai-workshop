@@ -528,6 +528,14 @@ h3 {
   position: relative;
   min-height: 100%;
   overflow: hidden;
+  text-align: center;
+}
+
+.person-card .avatar {
+  width: min(100%, 10.4rem);
+  height: 11.6rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .person-card::after {
@@ -558,21 +566,80 @@ h3 {
 }
 
 .avatar {
+  position: relative;
+  overflow: hidden;
   display: grid;
-  width: 3.3rem;
-  height: 3.3rem;
-  margin-bottom: 1rem;
+  width: 7.25rem;
+  height: 8.25rem;
+  margin-bottom: 1.15rem;
   place-items: center;
   color: white;
-  border-radius: 50%;
+  border-radius: var(--radius);
   background: linear-gradient(135deg, var(--blue), #0f7a4f);
+  border: 1px solid rgba(217, 224, 234, 0.9);
+  box-shadow: 0 12px 30px rgba(13, 49, 94, 0.14);
   font-weight: 850;
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+img[alt="Yoshua Bengio"] {
+  object-position: center 18%;
+}
+
+img[alt="Feng Liu"],
+img[alt="Javen Qinfeng Shi"] {
+  object-position: center center;
+}
+
+img[alt="Yu Yao"] {
+  object-position: center 12%;
+}
+
+.avatar span {
+  position: relative;
+  z-index: 1;
+}
+
+.avatar img + span {
+  color: transparent;
 }
 
 .role {
   margin-top: 0.45rem;
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.person-card .role {
+  max-width: 18rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.person-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.person-head .avatar {
+  width: 5.4rem;
+  height: 5.9rem;
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
+.person-head h3 {
+  min-width: 0;
 }
 
 .agenda-board {
@@ -1032,6 +1099,11 @@ h3 {
   .committee-shell {
     grid-template-columns: 1fr;
   }
+
+  .person-card .avatar {
+    width: min(100%, 9.4rem);
+    height: 10.5rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1132,6 +1204,20 @@ h3 {
 
   .organizer-card.featured {
     grid-column: auto;
+  }
+
+  .person-card {
+    text-align: left;
+  }
+
+  .person-card .avatar {
+    width: min(100%, 8.5rem);
+    height: 9.4rem;
+    margin-left: 0;
+  }
+
+  .person-card .role {
+    margin-left: 0;
   }
 
   .cta-band {
