@@ -878,6 +878,18 @@ img[alt="Lam Kwok Yan"] {
   border-color: rgba(21, 79, 144, 0.45);
 }
 
+.organizer-profile-note {
+  margin-top: 1rem;
+  padding: 1.4rem;
+  border-left: 4px solid var(--blue);
+  background: var(--surface);
+}
+
+.organizer-profile-note p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .committee-shell {
   display: grid;
   grid-template-columns: 280px 1fr;
