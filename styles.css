@@ -603,6 +603,10 @@ img[alt="Yu Yao"] {
   object-position: center 12%;
 }
 
+img[alt="Lam Kwok Yan"] {
+  object-position: center 10%;
+}
+
 .avatar span {
   position: relative;
   z-index: 1;
